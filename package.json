@@ -1,0 +1,17 @@
+{
+  "name": "problem-set-3_1",
+  "version": "1.0.0",
+  "description": "Problem Set 3.1",
+  "main": "exercises.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "jest": "^24.9.0"
+  }
+}
