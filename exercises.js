@@ -2,8 +2,8 @@ const isUpperCase = (word) => /^[A-Z]/.test(word);
 const removeVowels = (word) => word.join(" ").replace(/[aeiou]/g, "").split(" ");
 
 const wordCap= (str) =>{
-  return str.toLowerCase().replace(/\b[a-z]/g, function(match) {
-    return match.toUpperCase();
+  return str.toLowerCase().replace(/\b[a-z]/g, function(letter) {
+    return letter.toUpperCase();
   });
 };
 
@@ -14,8 +14,8 @@ const swapCase= (str) =>{
 };
 
 const staggeredCase = (str) =>{
-    return str.toLowerCase().replace(/.{2}/g, function(match, $1, $2, offset, original) {
-        return '' + match[0].toUpperCase() + match[1];
+    return str.replace(/.{2}/g, function(letter) {
+        return letter[0].toUpperCase() + letter[1].toLowerCase();
     });
 };
 
