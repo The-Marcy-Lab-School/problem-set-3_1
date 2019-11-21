@@ -69,7 +69,7 @@ wordLengths();        // []
 ```javascript
 let text = 'D Smoke is humble. The Inglewood native exudes an aura of maturation, needed for his quick ascension into popular culture as the first winner of Rhythm + Flow, Netflix’s hip-hop reality competition centered on the discovery of hip-hop’s next star. His signature authenticity shone throughout the 10-episode series and international audiences were drawn to his charisma as he proudly rapped about his lived experiences as a young black man in Inglewood.';
 
-searchWord('his', text);      // 4 
+searchWord('his', text);      // 4
 searchWord('hip-hop', text);  // 1 (because "hip-hop's" !== "hip-hop")
 searchWord('flow', text);           // 1
 searchWord('is', text);           // 1
