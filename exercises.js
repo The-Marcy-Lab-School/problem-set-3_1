@@ -27,15 +27,15 @@ function staggeredCase (phrase) {
   let prevCharCap = false;
   for (const char of phrase) {
     if (char.match(/[a-z]/i)) {
-        if (prevCharCap === false) {
-            finalStr += char.toUpperCase();
-            prevCharCap = true;
-        } else {
-            finalStr += char.toLowerCase();
-            prevCharCap = false;
-        }
+      if (prevCharCap === false) {
+        finalStr += char.toUpperCase();
+        prevCharCap = true;
+      } else {
+        finalStr += char.toLowerCase();
+        prevCharCap = false;
+      }
     } else {
-        finalStr += char;
+      finalStr += char;
     }
   }
   return finalStr;
@@ -58,14 +58,14 @@ function wordLengths (phrase) {
 
 // 7
 function searchWord (word, text) {
-  const regex = new RegExp(`\\b^${word}$\\b`, 'ig');
+  const regex = new RegExp(`\\b${word}\\b`, 'ig');
   return text.match(regex) ? text.match(regex).length : 0;
 }
 
-//8
+// 8
 function highlightWord (word, text) {
-    const regex = new RegExp(`\\b^${word}$\\b`, 'ig');
-    return text.replace(regex, match => `'<strong>${match}</strong>'`);
+  const regex = new RegExp(`\\b${word}\\b`, 'ig');
+  return text.replace(regex, (match) => `<strong>${match}</strong>`);
 }
 
 // The code below ensures that this file can talk to our test file.
