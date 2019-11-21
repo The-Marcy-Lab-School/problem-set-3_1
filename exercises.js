@@ -3,7 +3,7 @@ const wordLengths = (string) => { // Takes a string
   var finalArray = [];
 
   sentence.forEach((word, index) => {
-    splitWord = word.split('')
+    let splitWord = word.split('')
     finalArray[index] = `${splitWord.join('')}  ${splitWord.length}`;
     return finalArray;
   });
@@ -12,9 +12,7 @@ const wordLengths = (string) => { // Takes a string
 const searchWord = (word, text) => {
   let myText = text.split(' ');
   let wordOccurence = 0;
-  let wordToSearch = word; // Assign word parameter for regex variable
-  var flags = 'gi'; // Simple string with flags
-  var regex = new RegExp(`(${wordToSearch})`, flags) // Create regex
+  let regex = new RegExp(`(${word})`, 'gi') // Create regex
 
   myText.forEach((char) => { // Iterate over myText check if any element matches word
     if(char.match(regex)) {
