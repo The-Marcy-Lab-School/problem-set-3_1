@@ -1,13 +1,14 @@
 const wordLengths = (string) => { // Takes a string
   const sentence = string.split(' '); // Split string to array of words
   var finalArray = [];
+}
 
   sentence.forEach((word, index) => {
     splitWord = word.split('')
     finalArray[index] = `${splitWord.join('')}  ${splitWord.length}`;
+    return finalArray;
   });
-  return finalArray
-}
+  
 
 const searchWord = (word, text) => {
   let myText = text.split(' ');
@@ -22,7 +23,6 @@ const searchWord = (word, text) => {
     }
     return wordOccurence; 
   });
-
 };
 
 // The code below ensures that this file can talk to our test file.
