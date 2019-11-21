@@ -1,7 +1,6 @@
 const wordLengths = (string) => { // Takes a string
   const sentence = string.split(' '); // Split string to array of words
   var finalArray = [];
-}
 
   sentence.forEach((word, index) => {
     splitWord = word.split('')
