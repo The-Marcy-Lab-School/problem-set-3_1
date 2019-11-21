@@ -47,33 +47,33 @@
 
 6. Write a function that takes a string as an argument, and returns an array that contains every word from the string, with each word followed by a space and the word's length. If the argument is an empty string or if no argument is passed, the function should return an empty array. You may assume that every pair of words in the string will be separated by a single space.
 
-```javascript
-wordLengths('cow sheep chicken');
-// ["cow 3", "sheep 5", "chicken 7"]
-
-wordLengths('baseball hot dogs and apple pie');
-// ["baseball 8", "hot 3", "dogs 4", "and 3", "apple 5", "pie 3"]
-
-wordLengths("It ain't easy, is it?");
-// ["It 2", "ain't 5", "easy, 5", "is 2", "it? 3"]
-
-wordLengths('Supercalifragilisticexpialidocious');
-// ["Supercalifragilisticexpialidocious 34"]
-
-wordLengths('');      // []
-wordLengths();        // []
-```
+      ```javascript
+      wordLengths('cow sheep chicken');
+      // ["cow 3", "sheep 5", "chicken 7"]
+      
+      wordLengths('baseball hot dogs and apple pie');
+      // ["baseball 8", "hot 3", "dogs 4", "and 3", "apple 5", "pie 3"]
+      
+      wordLengths("It ain't easy, is it?");
+      // ["It 2", "ain't 5", "easy, 5", "is 2", "it? 3"]
+      
+      wordLengths('Supercalifragilisticexpialidocious');
+      // ["Supercalifragilisticexpialidocious 34"]
+      
+      wordLengths('');      // []
+      wordLengths();        // []
+      ```
 
 7. Write a function that takes a word and a string of text as arguments, and returns an integer representing the number of times the word appears in the text. This function should count word matches even if the case does not match. You may assume that the word and text inputs will always be provided. You may assume that a word is any collection of characters separated by whitespace, `,`, `.`, `!`, or `?`.
 
-```javascript
-let text = 'D Smoke is humble. The Inglewood native exudes an aura of maturation, needed for his quick ascension into popular culture as the first winner of Rhythm + Flow, Netflix’s hip-hop reality competition centered on the discovery of hip-hop’s next star. His signature authenticity shone throughout the 10-episode series and international audiences were drawn to his charisma as he proudly rapped about his lived experiences as a young black man in Inglewood.';
-
-searchWord('his', text);      // 4 
-searchWord('hip-hop', text);  // 1 (because "hip-hop's" !== "hip-hop")
-searchWord('flow', text);           // 1
-searchWord('is', text);           // 1
-```
+      ```javascript
+      let text = 'D Smoke is humble. The Inglewood native exudes an aura of maturation, needed for his quick ascension into popular culture as the first winner of Rhythm + Flow, Netflix’s hip-hop reality competition centered on the discovery of hip-hop’s next star. His signature authenticity shone throughout the 10-episode series and international audiences were drawn to his charisma as he proudly rapped about his lived experiences as a young black man in Inglewood.';
+      
+      searchWord('his', text);      // 4 
+      searchWord('hip-hop', text);  // 1 (because "hip-hop's" !== "hip-hop")
+      searchWord('flow', text);           // 1
+      searchWord('is', text);           // 1
+      ```
 
 8. the function from the previous exercise returns the number of occurrences of a word in some text. Although this is useful, there are also situations in which we just want to find the word in the context of the text.
 
@@ -85,4 +85,4 @@ let text = 'D Smoke is humble. The Inglewood native exudes an aura of maturation
 highlightWord('his', text);
 
 // 'D Smoke is humble. The Inglewood native exudes an aura of maturation, needed for <strong>his</strong> quick ascension into popular culture as the first winner of Rhythm + Flow, Netflix’s hip-hop reality competition centered on the discovery of hip-hop’s next star. <strong>His</strong> signature authenticity shone throughout the 10-episode series and international audiences were drawn to <strong>his</strong> charisma as he proudly rapped about <strong>his</strong> lived experiences as a young black man in Inglewood.';
-
+```
