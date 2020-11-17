@@ -38,11 +38,11 @@ const swapCase = word => {
 // Question 5
 // Create an empty string to build the solution
 // Iterate through every letter
-// Keep track of whether the next char should be upper or lowercase
-  // If the current letter is a space
-    // Append a space to the string
-  // If the current letter is a letter
-    // Append either upper or lowercase, and switch for next time
+// Keep track of whether the next char should be upper or lowercase and store that in a "flag" variable
+  // If the current letter is a symbol or space
+    // Append it to the string
+  // If the current letter is a letter (use regex)
+    // Append either upper or lowercase, AND switch the "flag" variable for next time
 const staggeredCase = sentence => {
   let returnString = '';
   let upper = false;
