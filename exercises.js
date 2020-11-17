@@ -1,21 +1,17 @@
 // Question 1
-const isUpperCase = (word) => {
-  return word === word.toUpperCase();
-};
+const isUpperCase = word => word === word.toUpperCase();
 
 // Question 2
-const removeVowels = (array) => {
-  return array.map(word => word.replace(/[aeiuo]/gi, ''));
-};
+const removeVowels = array => array.map(word => word.replace(/[aeiuo]/gi, ''));
 
 // Question 3
-const wordCap = (sentence) => {
+const wordCap = sentence => {
   const array = sentence.split(" ");
   return array.map(word => word[0].toUpperCase() + word.slice(1).toLowerCase()).join(" ");
-}
+};
 
 // Question 4
-const swapCase = (word) => {
+const swapCase = word => {
   let returnString = '';
   for (let i = 0; i < word.length; i++) {
     if (word[i].match(/[a-z]/)) {
@@ -28,27 +24,27 @@ const swapCase = (word) => {
 };
 
 // Question 5
-const staggeredCase = (sentence) => {
+const staggeredCase = sentence => {
   let returnString = '';
   let upper = false;
   for (let i = 0; i < sentence.length; i++) {
     if (sentence[i].match(/[a-zA-Z]/)) {
       upper = !upper;
-      if(upper){
-        returnString += sentence[i].toUpperCase()
+      if (upper) {
+        returnString += sentence[i].toUpperCase();
       } else {
-        returnString += sentence[i].toLowerCase()
+        returnString += sentence[i].toLowerCase();
       }
     } else {
       returnString += sentence[i];
     }
   }
-  return returnString
+  return returnString;
 };
 
 // Question 6
 const wordLengths = (sentence = "") => {
-  if(sentence.length === 0){
+  if (sentence.length === 0) {
     return [];
   }
   return sentence.split(" ").map(word => `${word} ${word.length}`);
@@ -56,11 +52,11 @@ const wordLengths = (sentence = "") => {
 
 // Question 7
 const searchWord = (word, sentence) => {
-  let regex = new RegExp(`^${word}$`, "i")
-  const array = sentence.split(" ")
+  const regex = new RegExp(`^${word}$`, "i");
+  const array = sentence.split(" ");
   let count = 0;
   for (let i = 0; i < array.length; i++) {
-    if(array[i].replace(/\W/g, '').match(regex)){
+    if (array[i].replace(/[^a-z0-9-]/ig, '').match(regex)) {
       count += 1;
     }
   }
@@ -68,16 +64,15 @@ const searchWord = (word, sentence) => {
 };
 
 // Question 8
-const highlightWord = (word, sentence) => {
-  let regex = new RegExp(`^(${word})$`, "i");
-  const array = sentence.split(" ")
+const highlightWord = (searchTerm, sentence) => {
+  const regex = new RegExp(`^(${searchTerm})$`, "i");
+  const array = sentence.split(" ");
   return array.map(word => {
     if (word.match(regex)) {
-      return word.replace(regex, "<strong>$1</strong>")
-    } else { 
-      return word 
+      return word.replace(regex, "<strong>$1</strong>");
     }
-  }).join(" ")
+    return word;
+  }).join(" ");
 };
 
 // The code below ensures that this file can talk to our test file.
