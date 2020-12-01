@@ -60,7 +60,7 @@ const searchWord = (word, sentence) => {
   const array = sentence.split(" ")
   let count = 0;
   for (let i = 0; i < array.length; i++) {
-    if(array[i].replace(/\W/g, '').match(regex)){
+    if(array[i].replace(/[^a-zA-Z-]/g, '').match(regex)){
       count += 1;
     }
   }
