@@ -34,7 +34,7 @@ const searchWord = () => {
 };
 
 // Question 8
-const highlightWord = () => {
+const processReleaseData = () => {
 
 };
 
@@ -47,5 +47,5 @@ module.exports = {
   staggeredCase,
   wordLengths,
   searchWord,
-  highlightWord,
+  processReleaseData,
 };
