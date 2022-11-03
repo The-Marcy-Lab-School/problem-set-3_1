@@ -56,10 +56,73 @@ test('Question 7: searchWord', () => {
 });
 
 // Question 8
-test('Question 8: highlightWord', () => {
-  let text = 'D Smoke is humble. The Inglewood native exudes an aura of maturation, needed for his quick ascension into popular culture as the first winner of Rhythm + Flow, Netflix’s hip-hop reality competition centered on the discovery of hip-hop’s next star. His signature authenticity shone throughout the 10-episode series and international audiences were drawn to his charisma as he proudly rapped about his lived experiences as a young black man in Inglewood.';
+test('Question 8: processReleaseData', () => {
+    let newReleases = [
+        {
+            'id': 70111470,
+            'title': 'Die Hard',
+            'boxart': 'http://cdn-0.nflximg.com/images/2891/DieHard.jpg',
+            'uri': 'http://api.netflix.com/catalog/titles/movies/70111470',
+            'rating': [4.0],
+            'bookmark': [],
+        },
+        {
+            'id': 654356453,
+            'boxart': 'http://cdn-0.nflximg.com/images/2891/BadBoys.jpg',
+            'uri': 'http://api.netflix.com/catalog/titles/movies/70111470',
+            'rating': [5.0],
+            'bookmark': [{ id:432534, time:65876586 }],
+        },
+        {
+            'title': 'The Chamber',
+            'boxart': 'http://cdn-0.nflximg.com/images/2891/TheChamber.jpg',
+            'uri': 'http://api.netflix.com/catalog/titles/movies/70111470',
+            'rating': [4.0],
+            'bookmark': [],
+        },
+        {
+            'id': 675465,
+            'title': 'Fracture',
+            'boxart': 'http://cdn-0.nflximg.com/images/2891/Fracture.jpg',
+            'uri': 'http://api.netflix.com/catalog/titles/movies/70111470',
+            'rating': [5.0],
+            'bookmark': [{ id:432534, time:65876586 }],
+        },
+    ];
+    expect(exercises.processReleaseData(newReleases)).toEqual([{ id: 70111470, title: 'Die Hard'}, { id: 675465, title: 'Fracture' }]);
   
-  let highlightedText = 'D Smoke is humble. The Inglewood native exudes an aura of maturation, needed for <strong>his</strong> quick ascension into popular culture as the first winner of Rhythm + Flow, Netflix’s hip-hop reality competition centered on the discovery of hip-hop’s next star. <strong>His</strong> signature authenticity shone throughout the 10-episode series and international audiences were drawn to <strong>his</strong> charisma as he proudly rapped about <strong>his</strong> lived experiences as a young black man in Inglewood.';
-
-  expect(exercises.highlightWord('his', text)).toBe(highlightedText);
+    newReleases = [
+        {
+            'id': 654356453,
+            'boxart': 'http://cdn-0.nflximg.com/images/2891/BadBoys.jpg',
+            'uri': 'http://api.netflix.com/catalog/titles/movies/70111470',
+            'rating': [5.0],
+            'bookmark': [{ id:432534, time:65876586 }],
+        },
+        {
+            'title': 'The Chamber',
+            'boxart': 'http://cdn-0.nflximg.com/images/2891/TheChamber.jpg',
+            'uri': 'http://api.netflix.com/catalog/titles/movies/70111470',
+            'rating': [4.0],
+            'bookmark': [],
+        },
+        {
+            'id': 70111471,
+            'title': 'Die Hard',
+            'boxart': 'http://cdn-0.nflximg.com/images/2891/DieHard.jpg',
+            'uri': 'http://api.netflix.com/catalog/titles/movies/70111470',
+            'rating': [4.0],
+            'bookmark': [],
+        },
+        {
+            'id': 675466,
+            'title': 'Fracture',
+            'boxart': 'http://cdn-0.nflximg.com/images/2891/Fracture.jpg',
+            'uri': 'http://api.netflix.com/catalog/titles/movies/70111470',
+            'rating': [5.0],
+            'bookmark': [{ id:432534, time:65876586 }],
+        },
+    ];
+    expect(exercises.processReleaseData(newReleases)).toEqual([{ id: 70111471, title: 'Die Hard'}, { id: 675466, title: 'Fracture' }]);
 });
+
