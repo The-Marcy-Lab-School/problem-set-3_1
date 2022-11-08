@@ -123,10 +123,10 @@ const newReleases = [
   },
 ];
 ```
-The Function should generate an Array of Objects that contain only the `id` and `title` key/value pairs. You may assume that `id`, when existing, is an integer greater than 0. Here are the rules:
+The function should return an Array of Objects that contain only the `id` and `title` key/value pairs. You may assume that `id`, when existing, is an integer greater than 0. Here are the rules:
 
-Keep only releases that have both `id` and `title` data present.
-Keep only the `id` and `title` data for each release.
+- Keep only releases that have both `id` and `title` data present.
+- Keep only the `id` and `title` data for each release.
 
 ```javascript
 processReleaseData(newReleases); // [{ id: 70111470, title: 'Die Hard'}, { id: 675465, title: 'Fracture' }];
