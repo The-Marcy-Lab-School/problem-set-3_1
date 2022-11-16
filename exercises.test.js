@@ -7,7 +7,7 @@ test('Question 1: isUpperCase', () => {
   expect(exercises.isUpperCase('Four Score')).toBe(false);
   expect(exercises.isUpperCase('FOUR SCORE')).toBe(true);
   expect(exercises.isUpperCase('4SCORE!')).toBe(true);
-  expect(exercises.isUpperCase('')).toBe(true);
+  expect(exercises.isUpperCase('')).toBe(false);
 });
 
 // Question 2

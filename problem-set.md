@@ -10,7 +10,7 @@ isUpperCase('T');               // true
 isUpperCase('Four Score');      // false
 isUpperCase('FOUR SCORE');      // true
 isUpperCase('4SCORE!');         // true
-isUpperCase('');                // true
+isUpperCase('');                // false
 ```
 
 2. Write a function that takes an array of strings, and returns an array of the same strings values without the vowels (a, e, i, o, u).
