@@ -1,6 +1,6 @@
 # Problem Set: Unit 3 - String and List Processing 
 
-## Directions
+### Directions
 1. Run `npm install` to load project dependencies.
 2. Complete coding exercises in the `exercises.js` file. (You will find the questions in `problem-set.md` and unit tests in `exercises.test.js`)
 3. Test your code often by running `npm test`.
